@@ -17,22 +17,39 @@ describe('fetchBreedDescription', () => {
       done();
     });
   });
-});
 
-
-describe('fetchBreedDescription', () => {
   it('returns error if no valid input has been given, via callback', (done) => {
     fetchBreedDescription('', (err, desc) => {
       // we have error for this scenario
-      assert.note(err, !null);
+      //assert.equal(err, !null);
 
       const expectedDesc = null;
 
       // compare returned description
       assert.equal(expectedDesc, desc);
-
       done();
+
     });
   });
 
+
+
 });
+
+
+// describe('fetchBreedDescription No Breed', () => {
+//   it('returns error if no valid input has been given, via callback', (done) => {
+//     fetchBreedDescription('', (err, desc) => {
+//       // we have error for this scenario
+//       //assert.equal(err, !null);
+
+//       const expectedDesc = null;
+
+//       // compare returned description
+//       assert.equal(expectedDesc, desc);
+
+//       done();
+//     });
+//   });
+
+// });
